@@ -1,0 +1,20 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .logout-button {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .logout-button:hover {
+    background: #cc0000;
+  }
+  
