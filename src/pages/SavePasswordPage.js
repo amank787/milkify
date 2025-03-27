@@ -51,7 +51,7 @@ function SavePasswordPage() {
           </button>
         </form>
         <div className="save-password-links">
-          <button onClick={() => navigate("/loginpage")} className="back-to-login">
+          <button onClick={() => navigate("/Loginpage.js")} className="back-to-login">
             Back to Login
           </button>
         </div>

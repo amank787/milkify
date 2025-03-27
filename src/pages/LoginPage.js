@@ -6,16 +6,17 @@ import logo from "../assets/milkyfy-logo.png";
 function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, ] = useState("");
-   const navigate = useNavigate();
+  const [error, setError] = useState(""); // Added setError to update error state
+  const navigate = useNavigate();
 
-  // const handleLogin = (e) => {
-  //  Get stored credentials from localStorage (Replace with API call in real app)
-  //   const storedUsername = localStorage.getItem("username");
-  //   const storedPassword = localStorage.getItem("password");
+  const handleLogin = (e) => {
+    e.preventDefault(); // Prevent form from refreshing the page
 
-    if (username === storedUsername && password === storedPassword) 
-{
+    // Get stored credentials from localStorage (Replace with API call in real app)
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    if (username === storedUsername && password === storedPassword) {
       localStorage.setItem("isLoggedIn", "true"); // Save login state
       navigate("/home"); // Redirect to Home Page
     } else {
@@ -61,4 +62,5 @@ function LoginPage() {
   );
 }
 
+//  Move export statement outside the component
 export default LoginPage;
